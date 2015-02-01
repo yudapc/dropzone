@@ -536,7 +536,10 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
         file.previewTemplate = file.previewElement;
         this.previewsContainer.appendChild(file.previewElement);
         file.previewElement.querySelector("[data-dz-name]").textContent = file.name;
-        file.previewElement.querySelector("[data-dz-size]").innerHTML = this.filesize(file.size);
+        var host = window.location.origin;
+        var file_url = host + '/uploads/' + file.name.replace(/\s/g,'_');
+        var input_form_file_url = '<input type="text" class="url" value="'+ file_url +'"/>';
+        file.previewElement.querySelector("[data-dz-size]").innerHTML = input_form_file_url;
         if (this.options.addRemoveLinks) {
           file._removeLink = Dropzone.createElement("<a class=\"dz-remove\" href=\"javascript:undefined;\">" + this.options.dictRemoveFile + "</a>");
           file._removeLink.addEventListener("click", function(e) {

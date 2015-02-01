@@ -1,21 +1,12 @@
 <html>
- 
-<head>   
-<title>Hopland Images</title> 
-<!-- 1 -->
-<link href="css/dropzone.css" type="text/css" rel="stylesheet" />
- 
-<!-- 2 -->
-<script src="dropzone.min.js"></script>
-
+<head>
+  <title>Hopland Images</title>
+  <link href="/css/dropzone.css" type="text/css" rel="stylesheet" />
+  <script src="/dropzone.js"></script>
 </head>
- 
+
 <body>
- 
-<!-- 3 -->
-<form action="upload.php" class="dropzone">
-</form>
-   
+  <form action="upload.php" class="dropzone">
+  </form>
 </body>
- 
 </html>
